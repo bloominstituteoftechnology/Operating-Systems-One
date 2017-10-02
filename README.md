@@ -117,6 +117,9 @@ Dozens of specific file systems
 
 # Assignments
 
+You must write a single C program that demonstrates examples of the basic C programming operations. They are all essentially identical to Javascript, with caveats.
 
+#### (First assignment)[first_C_programming_assignment.C]
+#### (Help for first assignment)[C_programming_help.C]
 
 
