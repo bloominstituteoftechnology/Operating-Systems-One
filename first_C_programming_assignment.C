@@ -84,5 +84,12 @@ int main(int argc, char** argv) {
   printf( "Monkey 1 name: %s\n", Monkey1.name);
   printf( "Monkey 1 favMovie: %s\n", Monkey1.favMovie);
 
+  float q;
+  q = 80.0/30.0;
+  printf("value of q: %f \n", q);
+
+  double d;
+  d = 678765.87868778;
+  printf("value of d: %f \n", d);
 }
 
