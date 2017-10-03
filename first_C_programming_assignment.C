@@ -37,12 +37,12 @@
 // In order to run a program, you must:
 // Write this C file
 // Make it syntactically correct
-// Compile the program with gcc my_first_C_program.C -o my_output
+// Compile the program with gcc first_C_programming_assignment.C -o my_output
 // ./my_output
 
 #include <stdio.h>
 
 int main(int argc, char** argv) {
-  printf("Hello world!");
+  printf("Hello world!\n");
 }
 

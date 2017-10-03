@@ -28,7 +28,6 @@ int main(int argc, char** argv) {
   // a character (char) is in single quotes
   return 100;
 
-
   // printf("argc is: ");
   // printf("%d\n", argc);
   
