@@ -3,9 +3,10 @@
 #### INDEX
 - Windows
 - Linux
-  - Bash and shell scripting
+  - Bash and shell scripting - ??? $PATH and variables like $PROJECT_NAME
   - SSH
-  - X11
+  - X11 - ???? what exactly is this?
+    - https://unix.stackexchange.com/a/276325/209303
   - Network programming
   - System calls
 - macOS
