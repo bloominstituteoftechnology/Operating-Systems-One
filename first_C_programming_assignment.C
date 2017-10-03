@@ -40,23 +40,39 @@
 // Compile the program with gcc first_C_programming_assignment.C -o my_output
 // ./my_output
 
+// READ ABOUT: vvv Popular Header Files
 #include <stdio.h>
 
+
 //  * primitives (int char float double)
-int integerFunction(int input) {
-  return input;
+int integerAddFunction() 
+{ 
+  int a = 3;
+  float b = 4.5;
+  double c = 5.25;
+  float sum;
+  
+  sum = a + b + c;
+
+  printf("The sum of a, b, and c is %f. \n", sum);
+  return 0;
 }
 //  * loops, break, continue
+
 //  * branches if else else if, while
+
 //  * arrays
+
 //  * structs (to become classes)
 
 
 // the main() f(x) invokes other functions within it
 // it is the first f(x) to be called when program starts execution
-// the diff btwn int main() VS. void main() is that VOID will not return a value to the OS
+// the diff btwn int main() VS. void main() is the return type 
+// (i.e., VOID will not return a value to the OS
 int main(int argc, char** argv) {
 // READ ABOUT: Program Status Variable Integer
+  integerAddFunction();
 
   printf("Hello world!\n");
   return 0; 
