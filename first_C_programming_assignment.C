@@ -41,8 +41,35 @@
 // ./my_output
 
 #include <stdio.h>
-
+#include <string.h>
 int main(int argc, char** argv) {
-  printf("Hello world!");
+  int myNum = 5;
+  char myChar = 'a';
+  float myFloat = 2.1;
+  double myDouble = 56789.87654321;
+  char myName[] = "Ryan Sherrill";
+  struct People {
+    long long int age;
+    int iq;
+    char name[700];
+  } ryan;
+  ryan.iq = 1;
+  ryan.age = 764387460328726403;
+  printf("%d", ryan.iq);
+  printf("%lld", ryan.age);
+  for (int i = 0; i <= 10; i++) {
+    printf("%d\n", i);
+    while (myNum > myFloat && myNum > 0) {
+      myNum--;
+      printf("%c\n", myName[myNum]);
+      continue;
+      if (myNum == 3) {
+        printf("three\n");
+      } else if (myNum == 2) {
+        printf("two\n");
+      } else {
+        printf("roundandroundandround\n");
+      } break;
+    }
+  }
 }
-
