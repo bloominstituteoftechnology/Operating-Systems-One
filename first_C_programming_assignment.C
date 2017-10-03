@@ -42,7 +42,23 @@
 
 #include <stdio.h>
 
+//  * primitives (int char float double)
+int integerFunction(int input) {
+  return input;
+}
+//  * loops, break, continue
+//  * branches if else else if, while
+//  * arrays
+//  * structs (to become classes)
+
+
+// the main() f(x) invokes other functions within it
+// it is the first f(x) to be called when program starts execution
+// the diff btwn int main() VS. void main() is that VOID will not return a value to the OS
 int main(int argc, char** argv) {
+// READ ABOUT: Program Status Variable Integer
+
   printf("Hello world!\n");
+  return 0; 
 }
 
