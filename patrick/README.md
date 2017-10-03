@@ -30,6 +30,7 @@
   - Drivers
   - File System
     - File table features
+- `gcc` GNU Compiler Collection
 
 #### Suggested Reading & Reference Material(s)
 - [Lecture Diagram of the OS flow](https://www.lucidchart.com/documents/edit/77a3b0fc-fc46-4c9f-9ce5-30c1b3597642?shared=true&)
