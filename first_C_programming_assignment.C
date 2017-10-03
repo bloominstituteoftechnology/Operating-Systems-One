@@ -1,8 +1,8 @@
 /**
- * primitives (int char float double)
- * loops, break, continue
- * branches if else else if, while
- * arrays
+* primitives (int char float double)
+* loops, break, continue
+* branches if else else if, while
+* arrays
  * structs (to become classes)
  * ^^^ ^^^ ^^^ ^^^ ^^^
  * Operating Systems C Lesson Assignment 1
@@ -43,8 +43,7 @@
 // READ ABOUT: vvv Popular Header Files
 #include <stdio.h>
 
-
-//  * primitives (int char float double)
+// (1) * primitives (int char float double)
 int integerAddFunction() 
 { 
   int a = 3;
@@ -54,16 +53,35 @@ int integerAddFunction()
   
   sum = a + b + c;
 
-  printf("The sum of a, b, and c is %f. \n", sum);
+  printf("The sum of a, b, and c is float %f. \n", sum);
   return 0;
 }
-//  * loops, break, continue
+// (2) * loops, break, continue
+int whileLoopFunction()
+{
+  return 0;
+}
 
-//  * branches if else else if, while
+// (3) * branches if else else if, while
 
-//  * arrays
+// (4) * arrays
+int printArray() 
+{
+/* defines an array of 6 integers */
+  int numbers[6];
+/* populates the array */
+  numbers[0] = 0;
+  numbers[1] = 1;
+  numbers[2] = 2;
+  numbers[3] = 3;
+  numbers[4] = 4;
+  numbers[5] = 5;
+/* print the 3rd number from the array */
+  return printf("The 3rd number in the array is: %d. \n", numbers[3]);
+  
+}
 
-//  * structs (to become classes)
+// (5) * structs (to become classes)
 
 
 // the main() f(x) invokes other functions within it
@@ -73,6 +91,8 @@ int integerAddFunction()
 int main(int argc, char** argv) {
 // READ ABOUT: Program Status Variable Integer
   integerAddFunction();
+
+  printArray();
 
   printf("Hello world!\n");
   return 0; 
