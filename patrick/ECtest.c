@@ -1,3 +1,5 @@
+// Linked List tutorial: http://www.zentut.com/c-tutorial/c-linked-list/
+
 /*
 & File     : main.c
 * Author   : zentut.com
