@@ -71,3 +71,21 @@ while(cursor != prev)
 
 node* new_node = create(data,cursor->next);
 cursor->next = new_node;
+
+/*
+    insert a new node after the prev node
+*/
+node* insert_after(node *head, int data, node* prev) {
+  /* find the prev node, starting from the first node*/
+  node *cursor = head;
+  while(cursor != prev)
+    cursor = cursor->next;
+
+  if(cursor != NULL) {
+    node* new_node = create(data,cursor->next);
+    cursor->next = new_node;
+    return head;
+  } else {
+    return NULL;
+  }
+}
