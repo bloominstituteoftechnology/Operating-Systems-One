@@ -204,3 +204,33 @@ node* remove_back(node* head) {
 
   return head;
 }
+
+node* remove_any(node* head,node* nd) {
+  /* if the node is the first node */
+  if(nd == head) {
+    head = remove_front(head);
+    return head;
+  }
+
+  /* if the node is the last node */
+  if(nd->next == NULL) {
+    head = remove_back(head);
+    return head;
+  }
+
+  /* if the node is in the middle */
+  node* cursor = head;
+  while(cursor != NULL) {
+    if(cursor->next = nd)
+      break;
+    cursor = cursor->next;
+  }
+
+  if(cursor != NULL) {
+    node* tmp = cursor->next;
+    cursor->next = tmp->next;
+    tmp->next = NULL;
+    free(tmp);
+  }
+  return head;
+}
