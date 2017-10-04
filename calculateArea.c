@@ -1,6 +1,6 @@
 /*
-Purpose: to calculate the price of burger purchases including a discount.
-concepts: if, else if, else
+Purpose: to calculate the area of some geometric shapes.
+concepts: if, else, switch, break, do while
 */
 #include <stdio.h>
 #include <stdlib.h>
