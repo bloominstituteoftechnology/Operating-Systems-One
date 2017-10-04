@@ -169,3 +169,16 @@ node* reverse(node* head) {
   head = prev;
   return head;
 }
+
+node* remove_front(node* head) {
+  if(head == NULL)
+    return NULL;
+  node *front = head;
+  head = head->next;
+  front->next = NULL;
+  /* is this the last node in the list */
+  if(front == head)
+    head = NULL;
+  free(front);
+  return head;
+}
