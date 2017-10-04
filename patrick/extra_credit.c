@@ -44,3 +44,7 @@ int count(node *head) {
   }
   return c;
 }
+
+node *cursor = head;
+while(cursor->next != NULL)
+  cursor = cursor->next;
