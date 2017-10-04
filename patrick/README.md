@@ -38,6 +38,12 @@
 - [Linux Kernel](https://github.com/torvalds/linux)
 - [The OS Process](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf)
 - [File systems at The Linux Documentation Project.org](http://www.tldp.org/LDP/sag/html/filesystems.html)
+- [Derek Banas C Video Tutorial](https://www.youtube.com/playlist?list=PLGLfVvz_LVvSaXCpKS395wbCcmsmgRea7)
+  - corresponding code pages:
+  - http://www.newthinktank.com/2013/07/c-video-tutorial/
+  - http://www.newthinktank.com/2013/07/c-video-tutorial-2/ etc.
+- [C escape characters](https://en.wikipedia.org/wiki/Escape_sequences_in_C#Table_of_escape_sequences)
+-
 
 ***
 There are three operating systems that are primarily popular on general purpose computers - Windows, Mac OS X, and Linux.
@@ -166,3 +172,4 @@ You must write a single C program that demonstrates examples of the basic C prog
 - Linked List in C
   - [Linked List tutorial](http://www.zentut.com/c-tutorial/c-linked-list/)
 - Binary Tree in C
+  - [Binary Tree tutorial](https://www.learn-c.org/en/Binary_trees)
