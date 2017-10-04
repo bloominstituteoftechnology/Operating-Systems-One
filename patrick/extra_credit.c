@@ -234,3 +234,17 @@ node* remove_any(node* head,node* nd) {
   }
   return head;
 }
+
+void dispose(node *head) {
+  node *cursor, *tmp;
+
+  if(head != NULL) {
+    cursor = head->next;
+    head->next = NULL;
+    while(cursor != NULL) {
+      tmp = cursor->next;
+      free(cursor);
+      cursor = tmp;
+    }
+  }
+}
