@@ -7,8 +7,7 @@ typedef struct node {
 
 node* head;
 
-node* create(int data, node* next)
-{
+node* create(int data, node* next) {
   node* new_node = (node*)malloc(sizeof(node));
   if(new_node == NULL) {
     printf("Error creating a new node.\n");
@@ -34,4 +33,14 @@ void traverse(node* head,callback f) {
     f(cursor);
     cursor = cursor->next;
   }
+}
+
+int count(node *head) {
+  node *cursor = head;
+  int c = 0;
+  while(cursor != NULL) {
+    c++;
+    cursor = cursor->next;
+  }
+  return c;
 }
