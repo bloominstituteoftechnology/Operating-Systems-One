@@ -89,3 +89,29 @@ node* insert_after(node *head, int data, node* prev) {
     return NULL;
   }
 }
+
+node* insert_before(node *head, int data, node* nxt) {
+  if(nxt == NULL || head == NULL)
+    return NULL;
+
+  if(head == nxt) {
+    head = prepend(head,data);
+    return head;
+  }
+
+  /* find the prev node, starting from the first node*/
+  node *cursor = head;
+  while(cursor != NULL) {
+    if(cursor->next == nxt)
+      break;
+    cursor = cursor->next;
+  }
+
+  if(cursor != NULL) {
+    node* new_node = create(data,cursor->next);
+    cursor->next = new_node;
+    return head;
+  } else {
+    return NULL;
+  }
+}
