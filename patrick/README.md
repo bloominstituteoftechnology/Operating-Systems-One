@@ -37,6 +37,7 @@
 - [macOS "The Early Boot Process"](https://developer.apple.com/library/content/documentation/Darwin/Conceptual/KernelProgramming/booting/booting.html)
 - [Linux Kernel](https://github.com/torvalds/linux)
 - [The OS Process](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf)
+- [File systems at The Linux Documentation Project.org](http://www.tldp.org/LDP/sag/html/filesystems.html)
 
 ***
 There are three operating systems that are primarily popular on general purpose computers - Windows, Mac OS X, and Linux.
@@ -160,3 +161,8 @@ You must write a single C program that demonstrates examples of the basic C prog
 
 #### [First assignment](./first_C_programming_assignment.C)
 #### [Help for first assignment](./C_programming_help.C)
+
+### Extra Credit
+- Linked List in C
+  - [Linked List tutorial](http://www.zentut.com/c-tutorial/c-linked-list/)
+- Binary Tree in C
