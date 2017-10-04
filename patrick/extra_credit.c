@@ -51,3 +51,16 @@ while(cursor->next != NULL)
 
 node* new_node =  create(data,NULL);
 cursor->next = new_node;
+
+node* append(node* head, int data) {
+  /* go to the last node */
+  node *cursor = head;
+  while(cursor->next != NULL)
+    cursor = cursor->next;
+
+  /* create a new node */
+  node* new_node =  create(data,NULL);
+  cursor->next = new_node;
+
+  return head;
+}
