@@ -52,7 +52,7 @@ int integerAddFunction()
   float sum;
   
   sum = a + b + c;
-
+// printf stands for 'print formatted'
   printf("The sum of a, b, and c is float %f. \n", sum);
   return 0;
 }
@@ -79,6 +79,9 @@ int printArray()
 /* print the 3rd number from the array */
   return printf("The 3rd number in the array is: %d. \n", numbers[3]);
   
+  char name[] = "Stevie Magic";
+
+
 }
 
 // (5) * structs (to become classes)
