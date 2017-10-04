@@ -22,24 +22,24 @@ int main(void) {
     // check the brand details
     if (numDigits(cardNumber) == 15 && (getFirstDigits(cardNumber) == 34 || getFirstDigits(cardNumber) == 37))
     {
-      return true;
+      printf("true\n");
     }
     else if (numDigits(cardNumber) == 16 && (getFirstDigits(cardNumber) > 50 && getFirstDigits(cardNumber) < 56))
     {
-      return true;
+      printf("true\n");
     }
     else if (numDigits(cardNumber) == 13 && (getFirstDigits(cardNumber) >= 40 && getFirstDigits(cardNumber) < 50))
     {
-      return true;
+      printf("true\n");
     }
     else
     {
-      return false;
+      printf("false\n");
     }
   }
   else
   {
-    return false;
+    printf("false\n");
   }
 }
 
