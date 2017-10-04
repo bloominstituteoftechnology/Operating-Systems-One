@@ -64,3 +64,7 @@ node* append(node* head, int data) {
 
   return head;
 }
+
+node *cursor = head;
+while(cursor != prev)
+  cursor = cursor->next;
