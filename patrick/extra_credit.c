@@ -126,3 +126,32 @@ node* search(node* head,int data) {
   }
   return NULL;
 }
+
+node* insertion_sort(node* head) {
+  node *x, *y, *e;
+
+  x = head;
+  head = NULL;
+
+  while(x != NULL) {
+    e = x;
+    x = x->next;
+    if (head != NULL) {
+      if(e->data > head->data) {
+        y = head;
+        while ((y->next != NULL) && (e->data> y->next->data)) {
+          y = y->next;
+        }
+        e->next = y->next;
+        y->next = e;
+      } else {
+        e->next = head;
+        head = e ;
+      }
+    } else {
+      e->next = NULL;
+      head = e ;
+    }
+  }
+  return head;
+}
