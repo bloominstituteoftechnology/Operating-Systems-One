@@ -12,34 +12,36 @@ int sumEverything();
 int checkValidity();
 int numDigits();
 int getFirstDigits();
+// long long getInput();
 
 int main(void) {
   // step one is call arrays() on the card number --> need to set it
-  long long cardNumber = 3434567891234;
+  long long cardNumber = 378282246310005;
+  // long long cardNumber = getInput();
   int checksum = sumEverything(makeArrays(cardNumber));
   if (checkValidity(checksum) == true)
   {
     // check the brand details
-    if (numDigits(cardNumber) == 15 && (getFirstDigits(cardNumber) == 34 || getFirstDigits(cardNumber) == 37))
+    if (numDigits(cardNumber) == 15 && (getFirstDigits(cardNumber, numDigits(cardNumber)) == 34 || getFirstDigits(cardNumber, numDigits(cardNumber)) == 37))
     {
-      printf("true\n");
+      printf("AMEX\n");
     }
-    else if (numDigits(cardNumber) == 16 && (getFirstDigits(cardNumber) > 50 && getFirstDigits(cardNumber) < 56))
+    else if (numDigits(cardNumber) == 16 && (getFirstDigits(cardNumber, numDigits(cardNumber)) > 50 && getFirstDigits(cardNumber, numDigits(cardNumber)) < 56))
     {
-      printf("true\n");
+      printf("MASTERCARD\n");
     }
-    else if (numDigits(cardNumber) == 13 && (getFirstDigits(cardNumber) >= 40 && getFirstDigits(cardNumber) < 50))
+    else if (numDigits(cardNumber) == 13 && (getFirstDigits(cardNumber, numDigits(cardNumber)) >= 40 && getFirstDigits(cardNumber, numDigits(cardNumber)) < 50))
     {
-      printf("true\n");
+      printf("VISA\n");
     }
     else
     {
-      printf("false\n");
+      printf("INVALID\n");
     }
   }
   else
   {
-    printf("false\n");
+    printf("INVALID\n");
   }
 }
 
@@ -50,6 +52,7 @@ struct cardArrays makeArrays(long long cardNumber) {
   for (int i = 0; i < 8; i++) {
     bothArrays.mults[i]=0;
   }
+  bothArrays.sum = 0;
   long long num = cardNumber;
   while (num > 0) {
     bothArrays.sum = bothArrays.sum + (num % 10);
@@ -80,22 +83,41 @@ int sumEverything(struct cardArrays bothArrays) { // take in struct from arrays(
 
 int checkValidity(int sum) { // takes in sum from sumEverything()
   if ((sum % 10) == 0) {
+    printf("Passes checksum\n");
     return true;
   }
+  printf("Fails checksum\n");
   return false;
 }
 
 int numDigits(long long cardNumber) {
   long long num = cardNumber;
   int count = 0;
-  while (num >= 0) {
-    num /= 10;
+  while (num > 0) {
+    num = floor(num / 10);
     count++;
   }
+  printf("Number of digits: %i\n",count);
   return count;
 }
 
 int getFirstDigits(long long cardNumber, int numOfDigits) {
-  long long divider = pow(10, (numOfDigits - 2));
-   int firstTwo = cardNumber / divider;
+  printf("numOfDigits for exp: %i\n",numOfDigits);
+  int exp = numOfDigits - 2;
+  long long divider = pow(10, exp);
+  int firstTwo = floor(cardNumber / divider);
+  printf("First two digits: %i\n",firstTwo);
+  return firstTwo;
 }
+
+// long long getInput() {
+//   long long cardNumber;
+//   do
+//   {
+//     printf("Enter card number without spaces: ");
+//     scanf("%lld", cardNumber);
+//   }
+//   while (cardNumber <= 0);
+//   printf("card number is: %lld",cardNumber);
+//   return cardNumber;
+// }
