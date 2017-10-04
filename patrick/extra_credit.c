@@ -115,3 +115,14 @@ node* insert_before(node *head, int data, node* nxt) {
     return NULL;
   }
 }
+
+node* search(node* head,int data) {
+
+  node *cursor = head;
+  while(cursor!=NULL) {
+    if(cursor->data == data)
+      return cursor;
+    cursor = cursor->next;
+  }
+  return NULL;
+}
