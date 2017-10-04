@@ -20,21 +20,18 @@ node* create(int data, node* next)
   return new_node;
 }
 
-node* prepend(node* head,int data)
-{
-    node* new_node = create(data,head);
-    head = new_node;
-    return head;
+node* prepend(node* head,int data) {
+  node* new_node = create(data,head);
+  head = new_node;
+  return head;
 }
 
 typedef void (*callback)(node* data);
 
-void traverse(node* head,callback f)
-{
-    node* cursor = head;
-    while(cursor != NULL)
-    {
-        f(cursor);
-        cursor = cursor->next;
-    }
+void traverse(node* head,callback f) {
+  node* cursor = head;
+  while(cursor != NULL) {
+    f(cursor);
+    cursor = cursor->next;
+  }
 }
