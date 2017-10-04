@@ -68,3 +68,6 @@ node* append(node* head, int data) {
 node *cursor = head;
 while(cursor != prev)
   cursor = cursor->next;
+
+node* new_node = create(data,cursor->next);
+cursor->next = new_node;
