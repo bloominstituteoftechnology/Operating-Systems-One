@@ -1,11 +1,14 @@
 // Linked List tutorial: http://www.zentut.com/c-tutorial/c-linked-list/
 
+#include<stdio.h>
+#include<stdlib.h>
+
 typedef struct node {
   int data;
   struct node* next;
 };
 
-node* head;
+// node* head;
 
 node* create(int data, node* next) {
   node* new_node = (node*)malloc(sizeof(node));
