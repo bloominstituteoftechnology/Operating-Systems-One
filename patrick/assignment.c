@@ -6,6 +6,9 @@
  * structs (to become classes)
  * ^^^ ^^^ ^^^ ^^^ ^^^
  * Operating Systems C Lesson Assignment 1
+ * EXTRA CREDIT:
+ * Linked List & walk it
+ * binary tree in C
 **/
 
 #include <stdio.h>
