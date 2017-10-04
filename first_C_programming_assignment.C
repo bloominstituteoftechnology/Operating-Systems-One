@@ -11,8 +11,8 @@
  * \/\/\/\/
  * extended types
  * pointers, references, dereferencers
- * memory malloc/free
- * constnagement ma
+ * memory management malloc/free
+ * const
  * meta programming (#ifdef)
  * declaration
  * definition
