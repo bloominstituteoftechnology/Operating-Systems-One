@@ -155,3 +155,17 @@ node* insertion_sort(node* head) {
   }
   return head;
 }
+
+node* reverse(node* head) {
+  node* prev    = NULL;
+  node* current = head;
+  node* next;
+  while (current != NULL) {
+    next  = current->next;
+    current->next = prev;
+    prev = current;
+    current = next;
+  }
+  head = prev;
+  return head;
+}
