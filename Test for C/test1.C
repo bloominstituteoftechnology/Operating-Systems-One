@@ -26,6 +26,16 @@ int main(int argc, char *argv[]){
 
     printf("Big Pi = %15f\n\n", reallyBigPi);
 
+    int array[50];
+    int i;
+    for(i = 0 ; i < 50 ; ++i ) {
+      array[i] = i*i;
+    }
+    int ii;
+    for(ii = 0 ; ii < 50 ; ii++ ) {
+      printf("%d\n", array[ii]);
+    }
+
 
  return 0;
 }
