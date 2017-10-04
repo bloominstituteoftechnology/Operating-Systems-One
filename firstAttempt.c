@@ -86,10 +86,10 @@ int sumEverything(struct cardArrays bothArrays) { // take in struct from arrays(
 // This function takes the sum and determines if it ends in 0 to verify the checksum
 int checkValidity(int sum) { // takes in sum from sumEverything()
   if ((sum % 10) == 0) {
-    printf("Passes checksum\n");
+    // printf("Passes checksum\n");
     return true;
   }
-  printf("Fails checksum\n");
+  // printf("Fails checksum\n");
   return false;
 }
 
@@ -101,17 +101,17 @@ int numDigits(long long cardNumber) {
     num = floor(num / 10);
     count++;
   }
-  printf("Number of digits: %i\n",count);
+  // printf("Number of digits: %i\n",count);
   return count;
 }
 
 // determining the first two digits of the card number
 int getFirstDigits(long long cardNumber, int numOfDigits) {
-  printf("numOfDigits for exp: %i\n",numOfDigits);
+  // printf("numOfDigits for exp: %i\n",numOfDigits);
   int exp = numOfDigits - 2;
   long long divider = pow(10, exp);
   int firstTwo = floor(cardNumber / divider);
-  printf("First two digits: %i\n",firstTwo);
+  // printf("First two digits: %i\n",firstTwo);
   return firstTwo;
 }
 
@@ -123,6 +123,6 @@ long long getInput() {
     scanf("%lld", &cardNumber);
   }
   while (cardNumber <= 0);
-  printf("card number is: %lld",cardNumber);
+  // printf("card number is: %lld",cardNumber);
   return cardNumber;
 }
