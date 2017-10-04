@@ -182,3 +182,25 @@ node* remove_front(node* head) {
   free(front);
   return head;
 }
+
+node* remove_back(node* head) {
+  if(head == NULL)
+    return NULL;
+
+  node *cursor = head;
+  node *back = NULL;
+  while(cursor->next != NULL) {
+    back = cursor;
+    cursor = cursor->next;
+  }
+  if(back != NULL)
+    back->next = NULL;
+
+  /* if this is the last node in the list*/
+  if(cursor == head)
+    head = NULL;
+
+  free(cursor);
+
+  return head;
+}
