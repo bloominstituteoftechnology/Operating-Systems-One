@@ -2,6 +2,7 @@
 #include <math.h>
 #define true 1
 #define false 0
+/* This algorithm is designed to analyze a credit card number to determine if it is valid card number for American Express, Visa or Mastercard*/
 
 struct cardArrays {
   int mults[8];
@@ -12,12 +13,12 @@ int sumEverything();
 int checkValidity();
 int numDigits();
 int getFirstDigits();
-// long long getInput();
+long long getInput();
 
 int main(void) {
   // step one is call arrays() on the card number --> need to set it
-  long long cardNumber = 378282246310005;
-  // long long cardNumber = getInput();
+  // long long cardNumber = 378282246310005;
+  long long cardNumber = getInput();
   int checksum = sumEverything(makeArrays(cardNumber));
   if (checkValidity(checksum) == true)
   {
@@ -45,7 +46,7 @@ int main(void) {
   }
 }
 
-
+// breaks the card number into an array with every other number starting with the next to last number with each digit multiplied by two and the remaining digits added together for a sum
 struct cardArrays makeArrays(long long cardNumber) {
   int n = 0;
   struct cardArrays bothArrays;
@@ -68,6 +69,7 @@ struct cardArrays makeArrays(long long cardNumber) {
   return bothArrays;
 }
 
+// This function takes the array of multiplied digits and adds them to the partial sum from the previous calculation
 int sumEverything(struct cardArrays bothArrays) { // take in struct from arrays()
   int sumAll = bothArrays.sum;
   int temp = 0;
@@ -81,6 +83,7 @@ int sumEverything(struct cardArrays bothArrays) { // take in struct from arrays(
   return sumAll;
 }
 
+// This function takes the sum and determines if it ends in 0 to verify the checksum
 int checkValidity(int sum) { // takes in sum from sumEverything()
   if ((sum % 10) == 0) {
     printf("Passes checksum\n");
@@ -90,6 +93,7 @@ int checkValidity(int sum) { // takes in sum from sumEverything()
   return false;
 }
 
+// determining the number of digits in the card number
 int numDigits(long long cardNumber) {
   long long num = cardNumber;
   int count = 0;
@@ -101,6 +105,7 @@ int numDigits(long long cardNumber) {
   return count;
 }
 
+// determining the first two digits of the card number
 int getFirstDigits(long long cardNumber, int numOfDigits) {
   printf("numOfDigits for exp: %i\n",numOfDigits);
   int exp = numOfDigits - 2;
@@ -110,14 +115,14 @@ int getFirstDigits(long long cardNumber, int numOfDigits) {
   return firstTwo;
 }
 
-// long long getInput() {
-//   long long cardNumber;
-//   do
-//   {
-//     printf("Enter card number without spaces: ");
-//     scanf("%lld", cardNumber);
-//   }
-//   while (cardNumber <= 0);
-//   printf("card number is: %lld",cardNumber);
-//   return cardNumber;
-// }
+long long getInput() {
+  long long cardNumber;
+  do
+  {
+    printf("Enter card number without spaces: ");
+    scanf("%lld", &cardNumber);
+  }
+  while (cardNumber <= 0);
+  printf("card number is: %lld",cardNumber);
+  return cardNumber;
+}
