@@ -48,3 +48,6 @@ int count(node *head) {
 node *cursor = head;
 while(cursor->next != NULL)
   cursor = cursor->next;
+
+node* new_node =  create(data,NULL);
+cursor->next = new_node;
