@@ -61,11 +61,8 @@ int integerAddFunction()
 
 int forLoopFunction()
 {
+  printf("Start of forLoop Function: \n");
   int A[] = {2, 4, 6, 8};
-
-
-
-
   int i;
 
   for (i = 0; i < 4; i++)
@@ -83,6 +80,17 @@ int forLoopFunction()
 
 int whileLoopFunction()
 {
+  printf("Start of WhileLoop Function: \n");
+  char A[7] = "Steven";
+  int i = 0;
+
+  while(A[i] != '\0')
+  {
+    printf("%c", A[i]);
+    printf("\n");
+    i++;
+  }
+  printf("\n");
   return 0;
 }
 
@@ -129,10 +137,11 @@ int main(int argc, char** argv) {
   integerAddFunction();
 
   forLoopFunction();
+
+  whileLoopFunction();
   
   printArray();
 
   printf("Hello world!\n");
   return 0; 
 }
-
