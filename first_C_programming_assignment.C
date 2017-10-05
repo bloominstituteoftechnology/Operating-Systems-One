@@ -57,6 +57,22 @@ int integerAddFunction()
   return 0;
 }
 // (2) * loops, break, continue
+
+int forLoopFunction()
+{
+  int A[] = {2, 4, 6, 8};
+  int i;
+
+  for (i = 0; i < 4; i++)
+  {
+    printf("Address = %d\n", &A[i]);
+    printf("Address = %d\n", A + i);
+    printf("Value = %d\n", A[i]);
+    printf("Value = %d\n", *(A + i));
+  }
+  return 0;
+}
+
 int whileLoopFunction()
 {
   return 0;
@@ -96,6 +112,8 @@ int main(int argc, char** argv) {
   integerAddFunction();
 
   printArray();
+
+  forLoopFunction();
 
   printf("Hello world!\n");
   return 0; 
