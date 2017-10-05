@@ -1,6 +1,6 @@
 # Operating Systems One
 
-There are three operating systems that are primarily popular on general purpose computers - Windows, Mac OS X, and Linux. 
+There are three operating systems that are primarily popular on general purpose computers - Windows, Mac OS X, and Linux.
 There are two operating systems that are essential for popular handhelds - Android and iOS.
 There are dozens of UNIX variants for simpler processors available. Typically when working with a small dedicated cpu (like an ARM CPU on an IoT device), the operating system supported for that device has been defined by the manufacturer of the device and is a subset of Linux.
 
@@ -49,7 +49,7 @@ Interface builder
 
 When your computer first boots, it provides power to various electronics components according to the design of the hardware. As each component powers up it executes a Power On Self Test. If POST succeeds, a very small operating system is activated with low level drivers to read and write memory, hard disks, simple display output, and potentially network cards.
 
-The BIOS attempts to read the first sector of the boot disc. In the first sector is the Boot Loader, which shows the BIOS which hard disk sector to execute first in order to activate the real operating system.  
+The BIOS attempts to read the first sector of the boot disc. In the first sector is the Boot Loader, which shows the BIOS which hard disk sector to execute first in order to activate the real operating system.
 
 In Windows, the Boot Loader is called the Master Boot Record. In Linux, it is GRUB or LILO. OS Xs Boot Loader is entirely proprietary.
 
@@ -113,7 +113,7 @@ Files are read and written from internal storage using PCIx drivers dedicated to
 - Redundancy
 - Small overhead
 
-Dozens of specific file systems 
+Dozens of specific file systems
 
 # Assignments
 
@@ -121,5 +121,3 @@ You must write a single C program that demonstrates examples of the basic C prog
 
 #### [First assignment](./first_C_programming_assignment.C)
 #### [Help for first assignment](./C_programming_help.C)
-
-
