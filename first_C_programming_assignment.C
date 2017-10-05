@@ -54,6 +54,7 @@ int integerAddFunction()
   sum = a + b + c;
 // printf stands for 'print formatted'
   printf("The sum of a, b, and c is float %f. \n", sum);
+  printf("\n");
   return 0;
 }
 // (2) * loops, break, continue
@@ -61,15 +62,22 @@ int integerAddFunction()
 int forLoopFunction()
 {
   int A[] = {2, 4, 6, 8};
+
+
+
+
   int i;
 
   for (i = 0; i < 4; i++)
   {
     printf("Address = %d\n", &A[i]);
     printf("Address = %d\n", A + i);
-    printf("Value = %d\n", A[i]);
-    printf("Value = %d\n", *(A + i));
+    printf("Pointer Value = %d\n", A[i]);
+    printf("Pointer Value = %d\n", *(A + i));
+    printf("\n");
   }
+    printf("Total Array Size in Bytes = %d\n", sizeof(A));
+    printf("\n");
   return 0;
 }
 
@@ -83,6 +91,15 @@ int whileLoopFunction()
 // (4) * arrays
 int printArray() 
 {
+  printf("Start of PrintArray Function: \n");
+
+  int A[] = {2, 4, 6, 8};
+  printf("Memory Address = %d\n", A);
+  printf("Memory Address = %d\n", &A[0]);
+  printf("Pointer Value = %d\n", A[0]);
+  printf("Pointer Value = %d\n", *A);
+  printf("\n");
+
 /* defines an array of 6 integers */
   int numbers[6];
 /* populates the array */
@@ -111,9 +128,9 @@ int main(int argc, char** argv) {
 // READ ABOUT: Program Status Variable Integer
   integerAddFunction();
 
-  printArray();
-
   forLoopFunction();
+  
+  printArray();
 
   printf("Hello world!\n");
   return 0; 
