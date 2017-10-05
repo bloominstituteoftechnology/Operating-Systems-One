@@ -1,5 +1,51 @@
 # Operating Systems One
 
+#### INDEX
+- Windows
+- Linux
+  - Bash and shell scripting - ??? $PATH and variables like $PROJECT_NAME
+  - SSH
+  - X11
+    - https://unix.stackexchange.com/a/276325/209303
+  - Network programming
+  - System calls
+- macOS
+  - Objective-C
+  - Interface builder
+- Pre-Operating System Technology
+  - B.I.O.S. - Built-In Operating System
+    - P.O.S.T - Power On Self Test
+    - Boot Loader
+      - Windows: Master Boot Record
+      - Linux: GRUB (Grand Unified Bootloader) or LILO (Linux Loader)
+      - macOS: proprietary (UEFI? Unified Extensible Firmware Interface)
+- Operating System Technology
+  - Boot-loader
+  - Kernel
+  - Processes
+    - Process table
+  - Scheduling
+  - Memory Management
+    - attack vectors
+  - Drivers
+  - File System
+    - File table features
+- `gcc` GNU Compiler Collection
+
+#### Suggested Reading & Reference Material(s)
+- [Lecture Diagram of the OS flow](https://www.lucidchart.com/documents/edit/77a3b0fc-fc46-4c9f-9ce5-30c1b3597642?shared=true&)
+- [macOS "The Early Boot Process"](https://developer.apple.com/library/content/documentation/Darwin/Conceptual/KernelProgramming/booting/booting.html)
+- [Linux Kernel](https://github.com/torvalds/linux)
+- [The OS Process](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf)
+- [File systems at The Linux Documentation Project.org](http://www.tldp.org/LDP/sag/html/filesystems.html)
+- [Derek Banas C Video Tutorial](https://www.youtube.com/playlist?list=PLGLfVvz_LVvSaXCpKS395wbCcmsmgRea7)
+  - corresponding code pages:
+  - http://www.newthinktank.com/2013/07/c-video-tutorial/
+  - http://www.newthinktank.com/2013/07/c-video-tutorial-2/ etc.
+- [C escape characters](https://en.wikipedia.org/wiki/Escape_sequences_in_C#Table_of_escape_sequences)
+-
+
+***
 There are three operating systems that are primarily popular on general purpose computers - Windows, Mac OS X, and Linux.
 There are two operating systems that are essential for popular handhelds - Android and iOS.
 There are dozens of UNIX variants for simpler processors available. Typically when working with a small dedicated cpu (like an ARM CPU on an IoT device), the operating system supported for that device has been defined by the manufacturer of the device and is a subset of Linux.
@@ -69,10 +115,11 @@ This enables curious developers to build and install a new kernel to their own c
 
 Every operating system provides the fundamental concept of a process. Processes are applications that run in user space.
 
+[The OS Process](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf)
+
 ### Process table
 
 The operating system allocates a list of processes called the process table. The process table is an array data about each process, such as where in memory its stack is located, what local data is needed for the currently executing stack frame, the id of the process, and much more.
-
 
 ## Scheduling
 
@@ -80,7 +127,7 @@ The kernel is responsible for sharing resources on a system between multiple pro
 
 Modern operating systems support mult-tasking, which means that the operating system runs multiple applications at the same time. Because a CPU in general can only perform one activity at a time, the operating system loads processes, their stack frames, and their stack resources in a round-robin fashion.
 
-[Image of stack frames being loaded in and out of execution]
+![Image of stack frames being loaded in and out of execution]()
 
 Each time a process is paused, its entire execution state is saved into main memory. The next processes stack frame is loaded from main memory, and execution is resumed.
 
@@ -89,7 +136,6 @@ Each time a process is paused, its entire execution state is saved into main mem
 The operating system is responsible for providing user programs access to memory. The operating system creates a stack frame at the beginning of a program's execution and allocates a section of available free memory for it to utilize. The program's memory space begins essentially at 0, and it has no knowledge of any memory outside of the memory that has been allocated to it by the operating system.
 
 This is one of the fundamental attack vectors used in attempting to take malicious control of a computer. The operating system is responsible for perfectly isolating each process from one another - if a process is able to gain access to memory other than what has been assigned to it it will be able to hijack the system.
-
 
 ## Drivers
 
@@ -107,7 +153,6 @@ How to write drivers on the PCIx bus or on a parallel bus is a lesson in Compute
 
 Files are read and written from internal storage using PCIx drivers dedicated to controlling hard disks. The operating system keeps a record of all of the files in the system, called the File Table.
 
-
 ### File table features:
 - Contiguity
 - Redundancy
@@ -115,9 +160,16 @@ Files are read and written from internal storage using PCIx drivers dedicated to
 
 Dozens of specific file systems
 
+***
 # Assignments
 
 You must write a single C program that demonstrates examples of the basic C programming operations. They are all essentially identical to Javascript, with caveats.
 
 #### [First assignment](./first_C_programming_assignment.C)
 #### [Help for first assignment](./C_programming_help.C)
+
+### Extra Credit
+- Linked List in C
+  - [Linked List tutorial](http://www.zentut.com/c-tutorial/c-linked-list/)
+- Binary Tree in C
+  - [Binary Tree tutorial](https://www.learn-c.org/en/Binary_trees)
