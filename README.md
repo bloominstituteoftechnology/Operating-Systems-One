@@ -7,7 +7,7 @@
 * [Kernel, Processes, Threads](objectives/kernel-proc)
 * [Memory Management, Drivers, File Systems](objectives/mm-drv-fs)
 
-## Assignment
+## Guided Demo
 
 ### File System
 
