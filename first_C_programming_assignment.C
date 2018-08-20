@@ -43,6 +43,39 @@
 #include <stdio.h>
 
 int main(int argc, char** argv) {
-  printf("Hello world!");
+  printf("Hello world!\n");
+  // for loop with ints.
+  for (int i = 0; i < 5; i++) {
+    printf("%d", i);
+  }
+  printf("\n");
+
+
+  for (int i = 5; i < 10; i++) {
+    if(i == 7) continue;
+    else if(i == 9) break;
+    else {
+      printf("%d", i);
+    }
+  }
+  printf("\n");
+  int array[5] = {11, 12, 13, 14, 15};
+  // have to do sizeof array / sizeof int because sizeof gives you bits
+  for (int i = 0; i < sizeof(array)/sizeof(int); i++) {
+    printf("array[%d] = %d\n", i, array[i]);
+  }
+  printf("\n");
+
+
+  struct LSPerson {
+    int classNumber;
+    char* name;
+  };
+
+  struct LSPerson Jesh;
+  Jesh.classNumber = 1;
+  Jesh.name = "Jesh";
+  printf("%s from class cs%d", Jesh.name, Jesh.classNumber);
+
 }
 
